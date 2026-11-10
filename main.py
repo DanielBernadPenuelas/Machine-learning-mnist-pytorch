@@ -26,10 +26,10 @@ def configurar_dispositivo():
     """
     if config.USAR_GPU and torch.cuda.is_available():
         dispositivo = torch.device('cuda')
-        print(f"✓ GPU disponible: {torch.cuda.get_device_name(0)}")
+        print(f"GPU disponible: {torch.cuda.get_device_name(0)}")
     else:
         dispositivo = torch.device('cpu')
-        print("✓ Usando CPU")
+        print("Usando CPU")
     
     return dispositivo
 
